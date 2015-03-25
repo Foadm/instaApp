@@ -5,7 +5,7 @@
   "authors": [
     "Foad Mozaffari <foadmozaffari@gmail.com>"
   ],
-  "description": "Code Challenge Renewable Funding",
+  "description": "Twitter app",
   "main": "index.html",
   "license": "MIT",
   "ignore": [
@@ -18,7 +18,6 @@
   "devDependencies": {
     "angular": "~1.3.13",
     "bootstrap": "~3.3.2",
-    "angular-route": "~1.3.13",
-    "moment": "~2.9.0"
+    "angular-route": "~1.3.13"
   }
 }
