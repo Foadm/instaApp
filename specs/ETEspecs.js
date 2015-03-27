@@ -1,6 +1,6 @@
 //Home page
 var AppHomepage = function(){
-    this.twitterOne = element(by.binding('pojo_grumpy.text'));
+    this.twitterOne = element.all(by.css("ul[name='Tweets'] > li:nth-child(1)"));
     this.twitterTwo = element(by.binding('pojo_maruthe.text'));
     this.get = function(){
         browser.get('http://localhost:8080/#/');

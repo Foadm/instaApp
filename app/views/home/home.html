@@ -1,4 +1,22 @@
 <div class="row">
-    <a href="/{{pojo_grumpy.entities.id}}"><div class="col-md-12">{{pojo_grumpy.text}}</div></a>
-    <a href="/{{pojo_grumpy.entities.id}}"><div class="col-md-12">{{pojo_maruthe.text}}</div>
+    <ul name="tweets">
+        <a href="/{{pojo_grumpy.entities.id}}">
+            <li class="col-md-12">
+                <div class="col-md-6 text">{{pojo_grumpy.text}}</div>
+                <div class="col-md-6">
+                    <div class="col-md-12 user">{{pojo_grumpy.user.name}}</div>
+                    <div class="col-md-12 date">{{pojo_grumpy.created_at}}</div>
+                </div>
+            </li>
+        </a>
+        <a href="/{{pojo_grumpy.entities.id}}">
+            <li class="col-md-12">
+                <div class="col-md-6 text">{{pojo_maruthe.text}}</div>
+                <div class="col-md-6">
+                    <div class="col-md-12 user">{{pojo_maruthe.user.name}}</div>
+                    <div class="col-md-12 date">{{pojo_maruthe.created_at}}</div>
+                </div>
+            </li>
+        </a>
+    </ul>
 </div>

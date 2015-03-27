@@ -2,6 +2,12 @@ twitterSearch
     .controller('homeCtrl',function($scope){
         $scope.pojo_grumpy = {
         "text": "Four more years. http:\/\/t.co\/bAJE6Vom",
+            "created_at": "Mon Sep 24 03:35:21 +0000 2012",
+            "id_str": "250075927172759552",
+            "user": {
+                "name": "Foad Mozaffari",
+                "profile_image_url": "http://a0.twimg.com/profile_images/447958234/Lichtenstein_normal.jpg",
+            },
             "entities": {
                 "hashtags": 'grumpycat',
                 "symbols": [],
@@ -44,6 +50,11 @@ twitterSearch
         }
         $scope.pojo_maruthe = {
             "text": "maruthe cat maruthe cat maruthe cat",
+            "created_at": "Mon Sep 21 04:35:21 +0000 2012",
+            "user": {
+                "name": "Chaz Martenstein",
+                "profile_image_url": "http://a0.twimg.com/profile_images/447958234/Lichtenstein_normal.jpg",
+                },
             "entities": {
                 "hashtags": 'grumpycat',
                 "symbols": [],
