@@ -1,6 +1,6 @@
 twitterSearch
     .controller('homeCtrl',function($scope){
-        $scope.pojo = {
+        $scope.pojo_grumpy = {
         "text": "Four more years. http:\/\/t.co\/bAJE6Vom",
             "entities": {
                 "hashtags": 'grumpycat',
@@ -42,4 +42,47 @@ twitterSearch
                 }]
             }
         }
+        $scope.pojo_maruthe = {
+            "text": "maruthe cat maruthe cat maruthe cat",
+            "entities": {
+                "hashtags": 'grumpycat',
+                "symbols": [],
+                "urls": [],
+                "user_mentions": [],
+                "media": [{
+                    "id": 266031293949698048,
+                    "id_str": "266031293949698048",
+                    "indices": [17, 37],
+                    "media_url": "http:\/\/pbs.twimg.com\/media\/A7EiDWcCYAAZT1D.jpg",
+                    "media_url_https": "https:\/\/pbs.twimg.com\/media\/A7EiDWcCYAAZT1D.jpg",
+                    "url": "http:\/\/t.co\/bAJE6Vom",
+                    "display_url": "pic.twitter.com\/bAJE6Vom",
+                    "expanded_url": "http:\/\/twitter.com\/BarackObama\/status\/266031293945503744\/photo\/1",
+                    "type": "photo",
+                    "sizes": {
+                        "medium": {
+                            "w": 600,
+                            "h": 399,
+                            "resize": "fit"
+                        },
+                        "thumb": {
+                            "w": 150,
+                            "h": 150,
+                            "resize": "crop"
+                        },
+                        "small": {
+                            "w": 340,
+                            "h": 226,
+                            "resize": "fit"
+                        },
+                        "large": {
+                            "w": 800,
+                            "h": 532,
+                            "resize": "fit"
+                        }
+                    }
+                }]
+            }
+        }
+
     });
