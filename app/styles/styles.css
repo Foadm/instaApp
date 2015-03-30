@@ -9,6 +9,6 @@ li{
     margin-bottom: 10px;
     border-radius: 5px;
 }
-.user, .date{
+.user, .date, .hashtag{
     text-align: right;
 }
