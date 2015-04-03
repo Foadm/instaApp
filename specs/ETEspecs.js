@@ -1,12 +1,13 @@
 //Home page
 var AppHomepage = function(){
-    this.twitterOneText = element(by.css(".first-text"));
-    this.twitterOneUser = element(by.css(".first-user"));
-    this.twitterOneDate = element(by.css(".first-date"));
-
-    this.twitterTwoText = element(by.css(".second-text"));
-    this.twitterTwoUser = element(by.css(".second-user"));
-    this.twitterTwoDate = element(by.css(".second-date"));
+    this.assert = ['first-text', 'first-user', 'first-date',
+        'second-text', 'second-user', 'second-date'];
+    var assertions = [];
+    this.assert.forEach(function(entry){
+        var testClass = '.' + entry;
+        assertions.push(element(by.css(testClass)));
+    });
+    this.assertions = assertions;
     this.get = function(){
         browser.get('http://localhost:8080/#/');
     }
@@ -14,14 +15,14 @@ var AppHomepage = function(){
 describe('app home page', function(){
     it('should check to see if tweet texts exist', function(){
         var appHomepage = new AppHomepage();
+        var matchedData = ['Four more years. http://t.co/bAJE6Vom','Foad Mozaffari','Mon Sep 24 03:35:21 +0000 2012',
+            'maruthe cat maruthe cat maruthe cat','Chaz Martenstein','Mon Sep 21 04:35:21 +0000 2012'];
         appHomepage.get();
-        expect((appHomepage.twitterOneText).getText()).toEqual('Four more years. http://t.co/bAJE6Vom');
-        expect((appHomepage.twitterOneUser).getText()).toEqual('Foad Mozaffari');
-        expect((appHomepage.twitterOneDate).getText()).toEqual('Mon Sep 24 03:35:21 +0000 2012');
-
-        expect((appHomepage.twitterTwoText).getText()).toEqual('maruthe cat maruthe cat maruthe cat');
-        expect((appHomepage.twitterTwoUser).getText()).toEqual('Chaz Martenstein');
-        expect((appHomepage.twitterTwoDate).getText()).toEqual('Mon Sep 21 04:35:21 +0000 2012');
+        var i = 0;
+        appHomepage.assertions.forEach(function(entry){
+            expect((entry).getText()).toEqual(matchedData[i]);
+            i = i + 1;
+        });
     })
 })
 
