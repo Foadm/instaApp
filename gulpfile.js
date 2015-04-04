@@ -7,8 +7,8 @@ gulp.task('connect', function() {
 });
 
 gulp.task('protractor', ['connect'], function(){
-    gulp.src(["specs/ETEspecs.js"])
-        .pipe(protractor({ configFile: "conf.js" }))
+    gulp.src(["spec/**/*_spec.js"])
+        .pipe(protractor({ configFile: "spec/protractor_config.js" }))
         .on('error', function(e) { throw e })
         .on('end', function() { connect.serverClose(); })
 });
