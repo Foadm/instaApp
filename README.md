@@ -1,17 +1,16 @@
-# instaApp
-1. installs npm dependencies
---------------
-    $ npm install
+## instaApp
 
-2. installs bower dependencies
+# install dependencies
 --------------
-    $ bower install
+$ npm install
+$ bower install
+$ bin/webdriver-manager update
 
-3. to start the local server, server will run on http://localhost:8080/
+# run tests
 --------------
-    $ gulp connect
+$ gulp
 
-4.to run end to end test make sure the app is running (step 3)
+# start the local server, server will run on http://localhost:8080/
 --------------
-    $ webdriver-manager start__
-    $ gulp protractor
+$ gulp connect
+
