@@ -4,7 +4,7 @@ twitterSearch
             templateUrl : 'views/home/home.html',
             controller : 'homeCtrl'
         })
-            .when('/:detail', {
+            .when('/detail', {
             templateUrl : 'views/detail/detail.html',
             controller : 'DetailCtrl'
         })
